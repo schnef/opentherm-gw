@@ -67,6 +67,8 @@ maar het was iets als volgt:
 
 `
 sudo apt-get install bison automake autoconf flex gcc
+`
+`
 sudo apt-get install gcc-avr binutils-avr avr-libc
 `
 
@@ -75,6 +77,8 @@ nieuwe versie 6 sources op.
 
 `
 cd avrdude/avrdude
+`
+`
 ./bootstrap && ./configure && sudo make install
 `
 
