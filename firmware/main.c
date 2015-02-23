@@ -68,7 +68,7 @@ void init(void) {
    * voordeliger is om heel hoge UART snelheid te pakken of
    * niet. Bij hoge snelheid komen interrupts heel snel na
    * elkaar en zou de tijdmeting op de ingangen mischien nadelig
-   * kunnen worden beinvloed. Gemiddeld moeten 4 karakters per
+   * kunnen worden beinvloed. Gemiddeld moeten 8 karakters per
    * seconde verstouwd kunnen worden om de buffers niet vol te
    * laten lopen, en dat is heel erg langzaam dus.
    */
@@ -119,7 +119,7 @@ uint8_t parity32(volatile uint8_t *bytes) {
  * gekopieerd naar een buffer van waaruit verstuurd wordt. Hierna
  * wordt nog de parity berekend en in de buffer gezet waarna de timer
  * wordt gestart. Het eigenlijke versturen wordt gedaan door de
- * interrupt handler die elke halfe clock tijd door de timer wordt
+ * interrupt handler die elke halve clock tijd door de timer wordt
  * gevuurd. Voor MASTER -> SLAVE wordt timer A gebruikt en voor SLAVE
  * -> MASTER wordt timer B gebruikt.
  */
@@ -257,7 +257,7 @@ uint8_t receive(volatile in_t *in, uint8_t msg[]) {
 // ============================== zend msg naar externe host ==============================
 
 /*
- * Stuur een bericht naar de externe externe host. We sturen berichten
+ * Stuur een bericht naar de externe host. We sturen berichten
  * in het zelfde formaat als OpenTherm en dus altijd van een vaste
  * lengte. Vaak zijn het gewoon de berichten die we voorbij hebben
  * zien komen tussen thermostaat en ketel, maar het kunnen ook de
@@ -275,7 +275,9 @@ void send_msg_to_host(uint8_t msg[]) {
  * Zet de globale mode, maar zet ook een van de leds om de mode aan te
  * geven en, heel sneaky, zet de watchdog timer op scherp in het geval
  * de nieuwe modus INTERCEPT of MONITOR is. Bij PASSTHRU wordt de WDT
- * juist weer uit gezet.
+ * juist weer uit gezet. De watchdog timer zorgt ervoor dat de gateway
+ * bij problemen met de extrene host toch weer terugkomt in een
+ * bekende status en we niet in de kou komen te zitten.
  */
 void set_mode(uint8_t m) {
   mode = m;
