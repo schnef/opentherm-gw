@@ -50,7 +50,7 @@ afwijkingen in de timing zijn geen probleem. De implementatie kan veel
 hogere snelheden aan dan de voor OpenTherm gedefinieerde timing.
 
 De firmware is zeer rudimentair maar is ook zeer betrouwbaar gebleken
-in de praktijk. Het is vooral de bedoeling dat een extrne applicatie
+in de praktijk. Het is vooral de bedoeling dat een externe applicatie
 de moeilijke dingen doet en de firmware van de gateway zich beperkt
 tot het hoog nodige. Er is voldoende ruimte in flash over om extra
 functionaliteit in te bouwen en de C-sources spreken voor zich.
@@ -78,7 +78,7 @@ nieuwe versie 6 sources op.
 
 ## Links
 
-- [Controlling the central heating system](http://otgw.tclcode.com/index.html);
+- [Controlling the central heating system](http://otgw.tclcode.com/index.html) is het project waar het hardware ontwerp uitgehaald is;
 - [OpenTherm Protocol Specifications 2.2](http://www.domoticaforum.eu/uploaded/Ard%20M/Opentherm%20Protocol%20v2-2.pdf);
 - [Atmel Manchester Coding Basics Application Note](http://www.nesweb.ch/downloads/doc9164.pdf);
 - [ATtiny2313A/4313 datasheet](http://www.atmel.com/images/doc8246.pdf);
