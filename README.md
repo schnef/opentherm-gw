@@ -65,22 +65,16 @@ programmeren. Kwestie van de niewste avrdude vanaf sources te
 installeren. Kan me niet meer heel precies herinneren hoe het ging,
 maar het was iets als volgt:
 
-`
-sudo apt-get install bison automake autoconf flex gcc
-`
-`
-sudo apt-get install gcc-avr binutils-avr avr-libc
-`
+`sudo apt-get install bison automake autoconf flex gcc`
+
+`sudo apt-get install gcc-avr binutils-avr avr-libc`
 
 Haal [hier](http://download.savannah.gnu.org/releases/avrdude/) de
 nieuwe versie 6 sources op.
 
-`
-cd avrdude/avrdude
-`
-`
-./bootstrap && ./configure && sudo make install
-`
+`cd avrdude/avrdude`
+
+`./bootstrap && ./configure && sudo make install`
 
 ## Links
 
