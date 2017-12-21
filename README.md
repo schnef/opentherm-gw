@@ -1,5 +1,9 @@
 # OpenTherm Gateway
 
+ *** THE SCHEMATICS REQUIRE UPDATING: USE WITH CARE ****
+ 
+ Use the original [schematics](http://otgw.tclcode.com/index.html) as a reference.
+
 Deze gateway maakt het mogelijk om het dataverkeer tussen een
 thermostaat en een CV-ketel te monitoren of om te lieden via een
 externe applicatie. In monitor mode kan data worden verzameld, maar in
